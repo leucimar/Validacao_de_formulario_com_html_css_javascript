@@ -1,0 +1,151 @@
+Ir:root {
+    --bg: #f7f7fa;
+    --card: #ffffff;
+    --text: #1f2430;
+    --muted: #6b7280;
+    --ok: #0b8f44;
+    --err: #c02626;
+    --border: #e5e7eb;
+    --focus: #3b82f6;
+  }
+  
+  * { box-sizing: border-box; }
+  
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+    color: var(--text);
+    background: linear-gradient(180deg, var(--bg), #eef1f5);
+  }
+  
+  .container {
+    max-width: 760px;
+    margin: 48px auto;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px 24px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  }
+  
+  h1 { margin: 0 0 8px; font-size: 1.6rem; }
+  
+  .note {
+    margin: 0 0 20px;
+    color: var(--muted);
+    font-size: .95rem;
+  }
+  
+  .field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 14px;
+  }
+  
+  label {
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  
+  input[type="text"],
+  input[type="password"],
+  input[type="number"] {
+    padding: 12px 12px;
+    border: 1.5px solid;
+    border-color: var(--border);
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color .15s ease, box-shadow .15s ease;
+    background: #fff;
+  }
+  
+  input:focus {
+    border-color: var(--focus);
+    box-shadow: 0 0 0 4px rgba(59,130,246,.15);
+  }
+
+  .error-message {
+    color: #c02626; 
+    font-size: 0.85rem;
+    margin: 8px;
+    display: block;
+  }
+  
+  /* Feedback visual de validação */
+  .is-valid {
+    border-color: var(--ok) !important;
+    box-shadow: 0 0 0 4px rgba(11,143,68,.12);
+  }
+  
+  .is-invalid {
+    border-color: var(--err) !important;
+    box-shadow: 0 0 0 4px rgba(192,38,38,.12);
+  }
+  
+  .feedback {
+    margin-top: 6px;
+    font-size: .9rem;
+    min-height: 1.1em;
+    color: var(--muted);
+  }
+  
+  .feedback.ok { color: var(--ok); }
+  .feedback.err { color: var(--err); }
+  
+  .help {
+    margin-top: 6px;
+    color: var(--muted);
+    font-size: .85rem;
+  }
+  
+  .actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+  }
+  
+  button {
+    padding: 12px 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    background: var(--focus);
+    color: #fff;
+  }
+  
+  button#btnLimpar {
+    background: #9ca3af;
+  }
+  button#btnCadastrar {
+    background-color: rgb(055,130,245);
+  }
+  
+  button:hover { filter: brightness(0.95); }
+  button:active { transform: translateY(1px); }
+  
+  /* Wrapper para o "olhinho" */
+  .input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .toggle-pass {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    line-height: 1;
+    user-select: none;
+    padding: 4px;
+  }
+  
+  .toggle-pass:focus {
+    outline: 2px solid var(--focus);
+    border-radius: 6px;
+  }
+  

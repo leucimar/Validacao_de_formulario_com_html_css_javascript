@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <h1>Cadastro de Usuários</h1>
+    <p>Exercício didático (Programação para internet II).</p>
+    <form name="cadastrationForm" class="field" novalidate>
+        <label for="nomeInput">Nome Completo</label>
+        <input type="text" id="nomeInput" name="nome" placeholder="Ex: Maria dos Santos">
+        <p class="error-message"></p>
+        <label for="cpfInput">CPF</label>
+        <input type="text" name="cpf" id="cpfInput" placeholder="000.000.000-00">
+        <p class="error-message"></p>
+        <label for="loginInput">Login</label>
+        <input type="text" name="login" id="loginInput" placeholder="MariaSantos">
+        <p class="error-message"></p>
+        <label for="emailInput">Email</label>
+        <input type="text" name="email" id="emailInput" placeholder="mariasantos123@dominio.com">
+        <p class="error-message"></p>
+        <label for="senhaInput">Senha</label>
+        <div class="input-wrapper">
+            <input type="password" name="senha" id="senhaInput" placeholder="*******">
+            <p class="error-message"></p>
+            <button type="button" class="toggle-pass">👁️</button>
+        </div>
+        <br>
+        <label for="confirmSenhaInput">Confirme a Senha</label>
+        <div class="input-wrapper">
+            <input type="password" name="confirmSenha" id="confirmSenhaInput" placeholder="*******">
+            <p class="error-message"></p>
+            <button type="button" class="toggle-pass">👁️</button>
+        </div>
+        <br>
+        <label for="salarioInput">Salário(R$)</label>
+        <input type="number" name="salario" id="salarioInput" placeholder="0,00" aria-describedby="Ex: 3500.00">
+        <p class="error-message"></p>
+        <label for="dependentesInput">Número de Dependentes</label>
+        <input type="number" name="dependentes" id="dependentesInput" placeholder="0" aria-describedby="1 ou +">
+        <p class="error-message"></p>
+        <label for="impostoRendaInput">IR (calculado)</label>
+        <input type="number" name="impostoRenda" id="impostoRendaInput" placeholder="0,00" readonly>
+        <p>O IR será calculado ao sair do campo Dependentes</p>
+        <div>
+            <button type="submit" id="btnCadastrar">Cadastrar</button>
+            <button type="reset" id="btnLimpar">Limpar</button>
+        </div>
+    </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
